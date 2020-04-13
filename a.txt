@@ -1,3 +1,6 @@
-ONE
-FIVE
+one
+2
+three
+five
+6
 seven
