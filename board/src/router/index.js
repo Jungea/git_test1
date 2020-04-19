@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Read from '@/components/Read'
 import Create from '@/components/Create'
+import Detail from '@/components/Detail'
 
 Vue.use(VueRouter)
 
@@ -12,9 +13,14 @@ Vue.use(VueRouter)
     component: Read
   },
   {
-    path: '/create',
+    path: '/create/:contentId?',  //?는 있어도 그만 없어도 그만
     name: 'Create',
     component: Create
+  },
+  {
+    path: '/detail/:contentId',
+    name: 'Detail',
+    component: Detail
   },
  
 ]
