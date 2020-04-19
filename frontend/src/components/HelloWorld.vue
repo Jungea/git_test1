@@ -5,7 +5,7 @@
       <tr v-for="p in persons" v-bind:key="p.id">
         <td>{{ p.id }}</td>
         <td>{{ p.name }}</td>
-        <td>{{ p.age }}</td>
+        <td>{{ p.year }}</td>
       </tr>
     </table>
     <button type="button" v-on:click="getPersons()">조회</button>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'HelloWorld',
   props: {
@@ -26,12 +28,11 @@ export default {
   },
   methods:{
     getPersons() {
-      this.persons = [
-        {id:1, name:'홍길동', age:18 },
-        {id:2, name:'임꺽정', age:19 },
-        {id:3, name:'전우치', age:20 }
-      ]
-    },
+      const url = '/api/students';
+        return axios.get(url)
+                    .then(response => this.persons = response.data);
+      },
+
     clearPersons() {
       this.persons = [];
     }
