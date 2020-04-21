@@ -1,24 +1,88 @@
 <template>
-  <div class="login">
-    <h3>Sign In</h3>
-    <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Password"><br>
-    <button>Connection</button>
+  <div style="margin:100px auto; width:500px">
+    <b-jumbotron style="text-align:center; background:none;">
+      <h2>Login</h2>
+      <hr style="border:2px solid black; width: 90px;">
+      <div style="margin-top: 50px;">
+        <b-form @submit="onSubmit" v-if="show">
+        <!--아디-->
+          <b-form-group style="text-align:left"
+            id="input-group-1"
+            label="E-mail"
+            label-for="email"
+          >
+            <b-form-input 
+              id="email" 
+              v-model="form.email" 
+              :state="state" 
+              type="email"
+              required
+              trim
+              placeholder="Enter Email"
+              ></b-form-input>
+          </b-form-group>
+
+          <!--비번-->
+          <b-form-group style="text-align:left"
+            id="input-group-2"
+            label="Password"
+            label-for="password"
+          >
+            <b-form-input 
+              id="password" 
+              v-model="form.password" 
+              :state="state2" 
+              type="password" 
+              required
+              trim
+              placeholder="Enter Password"
+              ></b-form-input>
+          </b-form-group>
+
+          <b-button style="width:100%; margin-top:15px;" type="submit">Login</b-button>
+
+          <br><br>
+
+        </b-form>
+        <span style="margin-right: 40px"><a style="text-decoration:none; color:black" href="" @click="signUp">회원가입</a></span> 
+        <span><a style="text-decoration:none; color:black;" href="" @click="findPass">비밀번호 찾기</a></span> 
+      </div>
+    </b-jumbotron>
   </div>
 </template>
- 
+
 <script>
   export default {
-    name: 'login',
     data() {
-      return {};
+      return {
+        form: {
+          email: '',
+          password: ''
+        },
+        show: true
+      }
     },
-    methods: {}
+    methods: {
+      onSubmit(evt) {
+        evt.preventDefault()
+        location.href="/home"
+      },
+      signUp() {
+        this.$router.push({
+        path: 'signUp'
+        })
+      },
+      findPass() {
+        this.$router.push({
+        path: 'findPass'
+        })
+      }
+    }
   }
 </script>
- 
-<style scoped>  /* "scoped" attribute limit the CSS to this component only */
-  .login { margin-top: 40px; }
-  input { margin: 10px 0; width: 200px; padding: 5px; }
-  button { margin-top: 20px; width: 100px; cursor: pointer; padding: 5px; }
+
+<style>
+a{
+  font-weight: bold;
+}
 </style>

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <b-button v-b-toggle.sidebar-1>Toggle Sidebar</b-button>
         <table>
             <tr>
                 <th>글쓴이</th>

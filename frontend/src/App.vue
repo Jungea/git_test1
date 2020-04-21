@@ -1,38 +1,15 @@
 <template>
-  <div id="app">
-    <div id="nav">
-  <b-nav vertical class="w-25">
-    <b-nav-item active> <router-link to="/">Home</router-link></b-nav-item>
-    <b-nav-item><router-link to="/about">About</router-link></b-nav-item>
-    <b-nav-item><router-link to="/login">Login</router-link></b-nav-item>
-    <b-nav-item><router-link to="/sign-up">SignUp</router-link></b-nav-item>
-  </b-nav>
-      
-    </div>
-    <router-view/>
-  </div>
+  <b-container id="app" fluid>
+        <router-view/>
+  </b-container>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html, body, #app {
+  height: 100%
 }
 
-#nav {
-  padding: 30px;
+.myNav {
+    border-right: 1px solid lightgray;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
 </style>

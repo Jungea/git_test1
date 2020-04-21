@@ -1,13 +1,15 @@
 <template>
 <div>
-  <b-nav vertical class="w-25">
-    <b-nav-item active>Active</b-nav-item>
-    <b-nav-item>Link</b-nav-item>
-    <b-nav-item>Another Link</b-nav-item>
-    <b-nav-item disabled>Disabled</b-nav-item>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tenetur itaque sequi repellat alias? Eaque id corrupti corporis commodi error provident doloremque nihil laboriosam quod beatae placeat molestiae, quam ut?
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora incidunt dolore ullam deserunt, repellendus corrupti, molestias ad necessitatibus quas, veritatis magni maxime similique! Libero recusandae rerum similique perspiciatis voluptate nisi?
-  </b-nav>
+  
+  <b-sidebar id="sidebar-1" title="Sidebar" class="active" shadow>
+      <div class="px-3 py-2">
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+        </p>
+        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
+      </div>
+    </b-sidebar>
 </div>
 </template>
 <script>
