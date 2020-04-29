@@ -17,7 +17,7 @@
        <div>관리</div>
        <hr>
     </b-nav-item>
-    <b-nav-item>it 경진대회</b-nav-item>
+    <b-nav-item><router-link to="/"> it 경진대회</router-link></b-nav-item>
     <b-nav-item>프로젝트 게시판</b-nav-item>
     <b-nav-item>커뮤니티 게시판</b-nav-item>
     </b-nav>

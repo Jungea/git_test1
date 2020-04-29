@@ -5,7 +5,7 @@
         <Sidebar/>
       </b-col>
       <b-col>
-        내용 들어갈 자리
+        <ProjectManage/>
       </b-col>
     </b-row>
   </div>
@@ -13,11 +13,14 @@
 
 <script>
 import Sidebar from '@/components/Sidebar.vue'
+import ProjectManage from '@/components/ProjectManage.vue'
+// import MyPage from '@/components/MyPage.vue'
+
 
 export default {
   name: 'Home',
   components: {
-    Sidebar
+    Sidebar, ProjectManage
   }
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
   <b-container id="app" fluid>
     <b-row class="h-100">
-      <b-col class="myNav h-100 overflow-auto" cols="2"><Header/></b-col>
-      <b-col clos="10"><router-view/></b-col>
+      <b-col xl="2" class="header" ><Header/></b-col>
+      <b-col xl="10" class="content"><router-view/></b-col>
     </b-row>
   </b-container>
 </template>
@@ -21,10 +21,8 @@ export default {
 html, body, #app {
   height: 100%
 }
-#app {
-  border: 1px solid red;
+
+.header {
+  border-right: 1px solid lightgray;
 }
-  .myNav{
-    border: 1px solid gray;
-  }
 </style>

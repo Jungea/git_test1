@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Read from '@/components/Read'
 import Create from '@/components/Create'
 import Detail from '@/components/Detail'
+import List from '@/components/List'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ Vue.use(VueRouter)
     name: 'Detail',
     component: Detail
   },
+  {
+    path: '/a',
+    name: 'List',
+    component: List
+  }
  
 ]
 
