@@ -1,12 +1,18 @@
 <template>
   <div>
     <b-nav vertical>
-      <p class="mt-4 ml-1">
-        <b-icon-house-fill  style="cursor:pointer" class="mr-1" font-scale="1.4"></b-icon-house-fill>
-        {{name}} 님
-        <b-icon-bell style="cursor:pointer" class="ml-2" font-scale="1.3"></b-icon-bell>
-        <b-icon-gear style="cursor:pointer" class="ml-2" font-scale="1.3"></b-icon-gear>
-      </p>
+      <b-container>
+        <b-row class="text-center">
+          <b-col cols="2" class="p-0"><b-icon-house-fill  style="cursor:pointer" font-scale="1.4"></b-icon-house-fill></b-col>
+          <b-col cols="6" class="p-0">{{name}} 님</b-col>
+          <b-col cols="2" class="p-0"><b-icon-bell style="cursor:pointer" font-scale="1.3"></b-icon-bell></b-col>
+          <b-col cols="2" class="p-0"><b-icon-gear style="cursor:pointer" font-scale="1.3"></b-icon-gear></b-col>
+        </b-row>
+      </b-container>
+
+      <!-- <p class="mt-4 ml-1 text-center">
+        
+      </p> -->
       <b-nav-item disabled><hr/></b-nav-item>
 
       <b-nav-item> 

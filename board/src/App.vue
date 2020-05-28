@@ -2,7 +2,7 @@
   <b-container id="app" fluid>
     <b-row class="h-100">
       <b-col xl="2" class="header" ><Header/></b-col>
-      <b-col xl="10" class="content"><router-view/></b-col>
+      <b-col class="content"><router-view/></b-col>
     </b-row>
   </b-container>
 </template>

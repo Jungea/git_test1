@@ -4,6 +4,8 @@ import Read from '@/components/Read'
 import Create from '@/components/Create'
 import Detail from '@/components/Detail'
 import List from '@/components/List'
+import Page from '@/components/Page'
+import Kk from '@/components/Kk'
 
 Vue.use(VueRouter)
 
@@ -27,8 +29,17 @@ Vue.use(VueRouter)
     path: '/a',
     name: 'List',
     component: List
-  }
- 
+  },
+  {
+    path: '/b',
+    name: 'Page',
+    component: Page
+  },
+  {
+    path: '/k',
+    name: 'Kk',
+    component: Kk
+  },
 ]
 
 const router = new VueRouter({
