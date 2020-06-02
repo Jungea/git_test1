@@ -6,6 +6,7 @@ import Detail from '@/components/Detail'
 import List from '@/components/List'
 import Page from '@/components/Page'
 import Kk from '@/components/Kk'
+import Chat from '@/components/Chat'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ Vue.use(VueRouter)
     path: '/k',
     name: 'Kk',
     component: Kk
+  },
+  {
+    path: '/chat',
+    name: 'Chat',
+    component: Chat
   },
 ]
 
