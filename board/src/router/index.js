@@ -16,12 +16,12 @@ Vue.use(VueRouter)
     component: Read
   },
   {
-    path: '/create/:contentId?',  //?는 있어도 그만 없어도 그만
+    path: '/create/:postId?',  //?는 있어도 그만 없어도 그만
     name: 'Create',
     component: Create
   },
   {
-    path: '/detail/:contentId',
+    path: '/detail/:postId',
     name: 'Detail',
     component: Detail
   },

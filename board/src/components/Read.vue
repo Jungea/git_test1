@@ -1,31 +1,39 @@
 <template>
     <div>
-        <b-button v-b-toggle.sidebar-1>Toggle Sidebar</b-button>
-        <table>
+        {{data}}
+        <table class="m-3" border="1px solid black" width="500px">
             <tr>
-                <th>글쓴이</th>
-                <th>제목</th>
+                <th>번호</th>
                 <th>내용</th>
+                <th>글쓴이</th>
+                <th>날짜</th>
+                <th>파일</th>
             </tr>
-            <tr :key="index" v-for="(value,index) in data" @click="detail(index)">
-                <td>{{value.writer}}</td>
-                <td>{{value.title}}</td>
+            <tr v-for="value in data" :key="value.postId" @click="detail(value.postId)">
+                <td>{{value.postId}}</td>
                 <td>{{value.content}}</td>
+                <td>{{value.author}}</td>
+                <td>{{value.createDate}}</td>
+                <td>{{value.file}}</td>
+
             </tr>
         </table>
-        <button @click="write">글쓰기</button>
+        <button class="m-3" @click="write">글쓰기</button>
     </div>
 </template>
 
 <script>
-import data from '@/data'
+import axios from 'axios'
 
 export default {
     name: 'Read',
     data() {
         return {
-            data: data
+            data: []
         }
+    },
+    mounted() {
+        axios.get('/api/posts').then(response => this.data = response.data)
     },
     methods: {
         write() {
@@ -33,11 +41,11 @@ export default {
                 path: 'create'
             })
         },
-        detail(index) {
+        detail(postId) {
             this.$router.push({
                 name: 'Detail', //이때 path가 아니다.
                 params: {
-                    contentId: index
+                    postId: postId
                 }
             })
         }
