@@ -5,8 +5,8 @@ import Create from '@/components/Create'
 import Detail from '@/components/Detail'
 import List from '@/components/List'
 import Page from '@/components/Page'
-import Kk from '@/components/Kk'
 import Chat from '@/components/Chat'
+import GitHub from '@/components/GitHub'
 
 Vue.use(VueRouter)
 
@@ -37,9 +37,9 @@ Vue.use(VueRouter)
     component: Page
   },
   {
-    path: '/k',
-    name: 'Kk',
-    component: Kk
+    path: '/github',
+    name: 'GitHub',
+    component: GitHub
   },
   {
     path: '/chat',
